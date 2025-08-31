@@ -12,6 +12,8 @@
         </form>
     </div>
     <br>
+    <a href="form_tambah.php">Tambah</a>
+    <br>
     <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
@@ -51,7 +53,7 @@
                     echo "<td>" . htmlspecialchars($row['nama']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['umur']) . "</td>";
                     echo '<td>
-                            <a href="form_tambah.php?id='.$row['id'].'">Tambah<a> |
+                            <a href="detail.php?id=' . $row['id'] . '">Detail</a> |
                             <a href="form_edit.php?id=' . $row['id'] . '">Edit</a> |
                             <a href="hapus.php?id=' . $row['id'] . '" onclick="return confirm(\'Yakin ingin menghapus?\')">Hapus</a>
                           </td>';
