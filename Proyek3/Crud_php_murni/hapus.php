@@ -4,7 +4,7 @@ include 'koneksi.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM akademik_db WHERE id = ?";
+    $sql = "DELETE FROM mahasiswa WHERE id = ?";
     $stmt = $conn->prepare($sql);
 
     if ($stmt === false) {

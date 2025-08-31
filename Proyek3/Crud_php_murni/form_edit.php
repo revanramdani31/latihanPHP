@@ -1,19 +1,16 @@
 <?php
 include 'koneksi.php';
 
-// Cek apakah ID dikirimkan melalui URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // INI BAGIAN YANG DIPERBAIKI
-    $sql = "SELECT * FROM akademik_db WHERE id = ?";
+    $sql = "SELECT * FROM mahasiswa WHERE id = ?";
     
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Pastikan data ditemukan sebelum melanjutkan
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
     } else {

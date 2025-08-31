@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $umur = $_POST['umur']; // <- sudah konsisten huruf kecil
 
     // Query SQL untuk insert data
-    $sql = "INSERT INTO akademik_db (nim, nama, umur) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO mahasiswa (nim, nama, umur) VALUES (?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
